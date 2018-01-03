@@ -45,6 +45,6 @@ for line in test_fea:
 #print classifier.coef_
 
 test_fea.close()
-predicted_labels = classifier.predict(test_feas)
+predicted_labels = classifier.predict_proba(test_feas)
 for l in predicted_labels:
     sys.stdout.write(str(l[1]) + "\n")
