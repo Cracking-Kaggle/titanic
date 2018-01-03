@@ -4,6 +4,8 @@ https://www.kaggle.com/c/titanic
 
 ## Usage
 
+`run.sh` is an executable file which does following things in order:
+
 1. Extract features from train data:
 ```shell
   tail -n 891 data/train.csv | python gen_feature.py 1 > train.fea.csv
@@ -26,5 +28,9 @@ https://www.kaggle.com/c/titanic
 ```
 6. Clean up:
 ```shell
-  rm train.fea.csv train.label.csv test.fea.csv answer.label.csv answer.id.csv
+  rm answer.label.csv answer.id.csv
 ```
+
+`answer.csv` is the desired file for submission
+
+`clean.sh` is another executable file which deletes all temp files (`train.fea.csv train.label.csv test.fea.csv`)
