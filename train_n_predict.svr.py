@@ -4,9 +4,7 @@ Train with extracted features and make predictions on test data
 
 import sys
 
-from sklearn.linear_model import LogisticRegression
-
-classifier = LogisticRegression()
+from sklearn import svm
 
 train_fea = open(sys.argv[1])
 train_feas = []
@@ -28,6 +26,7 @@ for line in train_label:
 
 train_label.close()
 
+classifier = svm.SVR()
 classifier.fit(train_feas, train_labels)
 
 test_fea = open(sys.argv[3])
