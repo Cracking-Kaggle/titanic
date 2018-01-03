@@ -90,6 +90,15 @@ for line in sys.stdin:
         fea.append(0)
         fea.append(0)
         fea.append(1)
+    # try:
+    #     tkt = int(ticket.split(" ")[-1])
+    #     if tkt > 3101000:
+    #         tkt = 400000 + tkt % 3101000
+    #     fea.append(tkt/401000.0)
+    # except ValueError:
+    #     sys.stderr.write("PassengerId: " + passId + " Invalid ticket: " + ticket.split(" ")[-1] + "\n")
+    #     fea.append(0)
+    #     HACK_COUNT += 1
     # print len(fea)
     for i in range(0, len(fea) - 1):
         sys.stdout.write(str(fea[i]) + " ")
